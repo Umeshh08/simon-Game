@@ -8,6 +8,14 @@ h6 = document.querySelector("h6");
 let highscore = 0;
 
 let h = document.querySelector("h5");
+
+document.addEventListener("touchstart", function() { // For touchscreens
+    if (started == false) {
+        console.log("game started");
+        started = true;
+        levelup();
+    }
+});
 document.addEventListener("keypress", function(){
     if(started==false){
         console.log("game started");
